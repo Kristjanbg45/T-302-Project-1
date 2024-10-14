@@ -1,6 +1,6 @@
 
 
-from .abstract_processor import AbstractProcessor
+from structured_logging.processors.abstract_processor import AbstractProcessor
 from datetime import datetime
 
 class TimestampProcessor(AbstractProcessor):

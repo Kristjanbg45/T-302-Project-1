@@ -1,5 +1,8 @@
+#this needs to go to timestamp process then nullprocessor
 
-from .abstract_processor import AbstractProcessor
+
+
+from structured_logging.processors.abstract_processor import AbstractProcessor
 
 
 
@@ -11,10 +14,8 @@ class EnvironmentProcessor(AbstractProcessor):
         :param environment: The environment string (e.g., 'production').
         :param next_processor: The next processor in the chain (optional).
         """
-        super().__init__(next_processor)
-       
-       
         self.environment = environment
+        self._next_processor = next_processor
 
 
 

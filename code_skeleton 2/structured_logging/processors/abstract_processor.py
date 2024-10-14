@@ -1,6 +1,11 @@
 #here we will make a abstract method to implement the other processors using template method.
 
-from i_processor import IProcessor
+
+
+
+
+
+from structured_logging.processors.i_processor import IProcessor
 
 class AbstractProcessor(IProcessor):
     def __init__(self):
@@ -29,10 +34,8 @@ class AbstractProcessor(IProcessor):
 
 
 
-
-
-#AbstractProcessor: Implements the core functionality for chaining processors.
-#NullProcessor: Does nothing, acting as a placeholder or default processor.
-#TimestampProcessor: Adds a timestamp to the log data.
-#EnvironmentProcessor: Adds environment information (such as "production" or "development").
-#Usage: You can chain processors together and modify log data step-by-step.
+    #AbstractProcessor: Implements the core functionality for chaining processors.
+    #NullProcessor: Does nothing, acting as a placeholder or default processor.
+    #TimestampProcessor: Adds a timestamp to the log data.
+    #EnvironmentProcessor: Adds environment information (such as "production" or "development").
+    #Usage: You can chain processors together and modify log data step-by-step.
