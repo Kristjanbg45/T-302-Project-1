@@ -1,5 +1,4 @@
 from structured_logging.command_queue.command import Command
-from structured_logging.logger import logger
 
 class LoggingCommand(Command):
     def __init__(self, logger, log_data: dict):
