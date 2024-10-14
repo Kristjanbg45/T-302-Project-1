@@ -33,11 +33,6 @@ class Logger:
             self.__log_to_sink(processed_data)
 
     def __log_to_sink(self, log_data: dict):
-        """Logs the data to the configured sink."""
         self.__logger_config.sink.sink_data(log_data)
 
-    def __create_logging_command(self, log_data: dict):
-        """Creates a command to log the data asynchronously."""
-        def command():
-            self.__log_to_sink(log_data)
-        return command
+
